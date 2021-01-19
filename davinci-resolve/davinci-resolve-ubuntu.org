@@ -71,7 +71,7 @@ ffmpeg -i input.mkv -map 0:0 -map 0:1 -map 0:2 -vcodec dnxhd \
 -acodec:0 pcm_s16le -acodec:1 pcm_s16le -s 1920x1080 -r 30000/1001 -b:v 145M -pix_fmt yuv422p -f mov output.mov
 #+end_src
 
-** Convert mp4 to mov
+** Convert mov to mp4
 
 #+begin_src sh
 ffmpeg -i input.mov -vf yadif -codec:v libx264 -crf 1 -bf 2 \
